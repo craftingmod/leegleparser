@@ -1,0 +1,3 @@
+# autopreconfg
+
+Samsung Preconfig changer
