@@ -10,4 +10,5 @@ coverage
 
 yarn.lock
 
-key.ts
+/src/key.ts
+
