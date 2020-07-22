@@ -1,3 +1,4 @@
-export * from './lib/async';
-export * from './lib/hash';
-export * from './lib/number';
+import { google_api_key } from "./key"
+
+console.log(google_api_key)
+
