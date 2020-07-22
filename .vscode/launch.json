@@ -15,7 +15,8 @@
           "src/index.ts"
       ],
       "port": 9229,
-      "console": "integratedTerminal"
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
     },
     {
       "name": "Debug Project ts-node",
@@ -26,8 +27,8 @@
       "args": ["src/index.ts"],
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
       "skipFiles": ["<node_internals>/**", "node_modules/**"],
-      "outputCapture": "std"
     },    
     {
       "type": "node",
