@@ -8,4 +8,6 @@ export interface YTVideo {
     height:number,
   }
   publishedAt:Date
+  authorID:string
+  authorName:string
 }
