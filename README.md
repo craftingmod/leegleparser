@@ -1,3 +1,3 @@
-# autopreconfg
+# Leegle Parser
 
-Samsung Preconfig changer
+Youtube to mp3 (playlist, one video to album)
