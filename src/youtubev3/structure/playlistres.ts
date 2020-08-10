@@ -1,22 +1,22 @@
 export interface Main {
-  kind:          string;
-  etag:          string;
-  nextPageToken: string;
-  items:         Item[];
-  pageInfo:      PageInfo;
+  kind:string;
+  etag:string;
+  nextPageToken:string;
+  items:Item[];
+  pageInfo:PageInfo;
 }
 
 export interface Item {
-  kind:           ItemKind;
-  etag:           string;
-  id:             string;
-  snippet:        Snippet;
-  contentDetails: ContentDetails;
+  kind:ItemKind;
+  etag:string;
+  id:string;
+  snippet:Snippet;
+  contentDetails:ContentDetails;
 }
 
 export interface ContentDetails {
-  videoId:          string;
-  videoPublishedAt: Date;
+  videoId:string;
+  videoPublishedAt:Date;
 }
 
 export enum ItemKind {
@@ -24,20 +24,20 @@ export enum ItemKind {
 }
 
 export interface Snippet {
-  publishedAt:  Date;
-  channelId:    string;
-  title:        string;
-  description:  string;
-  thumbnails:   Thumbnails;
-  channelTitle: string;
-  playlistId:   string;
-  position:     number;
-  resourceId:   ResourceID;
+  publishedAt:Date;
+  channelId:string;
+  title:string;
+  description:string;
+  thumbnails:Thumbnails;
+  channelTitle:string;
+  playlistId:string;
+  position:number;
+  resourceId:ResourceID;
 }
 
 export interface ResourceID {
-  kind:    ResourceIDKind;
-  videoId: string;
+  kind:ResourceIDKind;
+  videoId:string;
 }
 
 export enum ResourceIDKind {
@@ -45,20 +45,20 @@ export enum ResourceIDKind {
 }
 
 export interface Thumbnails {
-  default:   Default;
-  medium:    Default;
-  high:      Default;
-  standard?: Default;
-  maxres?:   Default;
+  default:Default;
+  medium:Default;
+  high:Default;
+  standard?:Default;
+  maxres?:Default;
 }
 
 export interface Default {
-  url:    string;
-  width:  number;
-  height: number;
+  url:string;
+  width:number;
+  height:number;
 }
 
 export interface PageInfo {
-  totalResults:   number;
-  resultsPerPage: number;
+  totalResults:number;
+  resultsPerPage:number;
 }

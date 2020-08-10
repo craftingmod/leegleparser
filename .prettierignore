@@ -1,2 +1,6 @@
 # package.json is formatted by package managers, so we ignore it here
 package.json
+*.json
+dist/
+build/
+node_modules/

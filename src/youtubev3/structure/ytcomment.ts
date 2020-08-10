@@ -1,7 +1,7 @@
 export interface YTComment {
   formattedText:string
   rawText:string
-  author: {
+  author:{
     channelId:string
     name:string
     profileUrl:string

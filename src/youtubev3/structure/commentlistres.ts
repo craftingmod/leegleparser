@@ -1,16 +1,16 @@
 export interface Main {
-  kind:          string;
-  etag:          string;
-  nextPageToken: string;
-  pageInfo:      PageInfo;
-  items:         Item[];
+  kind:string;
+  etag:string;
+  nextPageToken:string;
+  pageInfo:PageInfo;
+  items:Item[];
 }
 
 export interface Item {
-  kind:    ItemKind;
-  etag:    string;
-  id:      string;
-  snippet: ItemSnippet;
+  kind:ItemKind;
+  etag:string;
+  id:string;
+  snippet:ItemSnippet;
 }
 
 export enum ItemKind {
@@ -18,18 +18,18 @@ export enum ItemKind {
 }
 
 export interface ItemSnippet {
-  videoId:         string;
-  topLevelComment: TopLevelComment;
-  canReply:        boolean;
-  totalReplyCount: number;
-  isPublic:        boolean;
+  videoId:string;
+  topLevelComment:TopLevelComment;
+  canReply:boolean;
+  totalReplyCount:number;
+  isPublic:boolean;
 }
 
 export interface TopLevelComment {
-  kind:    TopLevelCommentKind;
-  etag:    string;
-  id:      string;
-  snippet: TopLevelCommentSnippet;
+  kind:TopLevelCommentKind;
+  etag:string;
+  id:string;
+  snippet:TopLevelCommentSnippet;
 }
 
 export enum TopLevelCommentKind {
@@ -37,25 +37,25 @@ export enum TopLevelCommentKind {
 }
 
 export interface TopLevelCommentSnippet {
-  videoId:               string;
-  textDisplay:           string;
-  textOriginal:          string;
-  authorDisplayName:     string;
-  authorProfileImageUrl: string;
-  authorChannelUrl:      string;
-  authorChannelId:       AuthorChannelID;
-  canRate:               boolean;
-  viewerRating:          string;
-  likeCount:             number;
-  publishedAt:           Date;
-  updatedAt:             Date;
+  videoId:string;
+  textDisplay:string;
+  textOriginal:string;
+  authorDisplayName:string;
+  authorProfileImageUrl:string;
+  authorChannelUrl:string;
+  authorChannelId:AuthorChannelID;
+  canRate:boolean;
+  viewerRating:string;
+  likeCount:number;
+  publishedAt:Date;
+  updatedAt:Date;
 }
 
 export interface AuthorChannelID {
-  value: string;
+  value:string;
 }
 
 export interface PageInfo {
-  totalResults:   number;
-  resultsPerPage: number;
+  totalResults:number;
+  resultsPerPage:number;
 }

@@ -1,4 +1,4 @@
-import { YTVideo } from "./youtubev3/structure/ytvideo";
+import { YTVideo } from "./youtubev3/structure/ytvideo"
 
 export abstract class ParseComposer {
   public abstract channelID:string

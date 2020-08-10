@@ -8,8 +8,10 @@ import { YTChannelInfo } from "./structure/ytchannelinfo"
 export class YTWrapper {
   private readonly getChannelInfoFromIDURL = this.genAPI("channels", "id=$id&key=$key&part=snippet,contentDetails")
   private readonly getChannelInfoURL = this.genAPI("channels", "id=$id&key=$key&part=contentDetails")
-  private readonly getPlaylistItemsURL = this.genAPI("playlistItems", "part=snippet%2CcontentDetails&maxResults=50&playlistId=$id&key=$key&pageToken=$token")
-  private readonly getCommentsInVideoURL = this.genAPI("commentThreads", "part=snippet&maxResults=20&order=relevance&key=$key&videoId=$videoid")
+  private readonly getPlaylistItemsURL = this.genAPI("playlistItems",
+    "part=snippet%2CcontentDetails&maxResults=50&playlistId=$id&key=$key&pageToken=$token")
+  private readonly getCommentsInVideoURL = this.genAPI("commentThreads",
+    "part=snippet&maxResults=20&order=relevance&key=$key&videoId=$videoid")
   private token:string
   public constructor(token:string) {
     this.token = token
@@ -42,7 +44,7 @@ export class YTWrapper {
     const res = (await got<any>(url, {
       responseType: "json",
     })).body
-    return res.items[0].contentDetails.relatedPlaylists.uploads
+    return res.items[0].contentDetails.relatedPlaylists.uploads as string
   }
   public async getVideosfromPlaylist(playlistID:string) {
     const url = this.getPlaylistItemsURL.replace("$id", playlistID).replace("$key", this.token)
